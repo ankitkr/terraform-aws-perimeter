@@ -1,0 +1,12 @@
+# Optional: keep Terraform state in S3 instead of the local terraform.tfstate.
+# Copy to backend.tf, fill in an existing bucket, then run `terraform init -migrate-state`.
+
+terraform {
+  backend "s3" {
+    bucket       = "my-terraform-state"
+    key          = "perimeter/terraform.tfstate"
+    region       = "us-east-1"
+    encrypt      = true
+    use_lockfile = true
+  }
+}

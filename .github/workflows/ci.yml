@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  terraform:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: hashicorp/setup-terraform@v4
+        with:
+          terraform_version: latest
+          terraform_wrapper: false
+      - run: terraform fmt -check -recursive
+      - name: validate
+        run: |
+          for dir in . modules/member deploy deploy/member; do
+            echo "::group::$dir"
+            terraform -chdir="$dir" init -backend=false -input=false
+            terraform -chdir="$dir" validate
+            echo "::endgroup::"
+          done
+      - name: validate examples against this checkout
+        run: |
+          for example in examples/*/; do
+            tmp=$(mktemp -d)
+            sed -e "s#github.com/ankitkr/terraform-aws-perimeter//\([^?\"]*\)?ref=[^\"]*#$PWD/\1#" \
+                -e "s#github.com/ankitkr/terraform-aws-perimeter?ref=[^\"]*#$PWD#" "$example/main.tf" >"$tmp/main.tf"
+            terraform -chdir="$tmp" init -backend=false -input=false
+            terraform -chdir="$tmp" validate
+          done
+      - name: module tests (mocked provider)
+        run: |
+          terraform init -backend=false -input=false -test-directory=tests/terraform
+          terraform test -test-directory=tests/terraform
+
+  tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.14"
+      - run: pip install -r tests/requirements.txt
+      - run: pytest -q tests

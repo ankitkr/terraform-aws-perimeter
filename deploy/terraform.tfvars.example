@@ -1,0 +1,26 @@
+region  = "us-east-1"
+regions = ["us-east-1", "ap-south-1"]
+# aws_profile = "security"
+
+# Other accounts; apply deploy/member in each one.
+accounts = {
+  staging = "222222222222"
+}
+
+# Start in baseline: a week of inventories and scans, then a suggested `expected` block in the
+# bucket (suggested-expected.tf). Paste it below, give each entry a reason, and switch to enforce.
+mode = "baseline"
+
+expected = {
+  # "self/alb/api-prod" = { ports = [80, 443], reason = "public API" }
+  # "self/sg/sg-0abc*"  = { ports = [443], reason = "web tier" }
+}
+
+# Authorize the Slack workspace in the Amazon Q Developer console first, then copy its workspace
+# ID here, and the channel ID from the channel's link.
+# slack = {
+#   workspace_id = "T0123ABCD"
+#   channel_id   = "C0123ABCD"
+# }
+
+alert_emails = ["security@example.com"]

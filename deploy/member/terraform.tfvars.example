@@ -1,0 +1,5 @@
+# From the scanner stack: terraform output member
+scanner_account_id = "111111111111"
+scanner_region     = "us-east-1"
+regions            = ["us-east-1", "ap-south-1"]
+# aws_profile      = "staging"

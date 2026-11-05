@@ -1,0 +1,69 @@
+{
+  "aws.apigateway": [
+    "CreateApi",
+    "CreateRestApi",
+    "CreateStage"
+  ],
+  "aws.cloudfront": [
+    "CreateDistribution",
+    "CreateDistributionWithTags"
+  ],
+  "aws.ec2": [
+    "AssociateAddress",
+    "AssociateRouteTable",
+    "AttachInternetGateway",
+    "AuthorizeSecurityGroupIngress",
+    "CreateNetworkAclEntry",
+    "CreateRoute",
+    "ModifyInstanceAttribute",
+    "ModifyNetworkInterfaceAttribute",
+    "ModifySecurityGroupRules",
+    "ModifySubnetAttribute",
+    "ReplaceNetworkAclAssociation",
+    "ReplaceNetworkAclEntry",
+    "ReplaceRoute",
+    "ReplaceRouteTableAssociation",
+    "RunInstances"
+  ],
+  "aws.eks": [
+    "CreateCluster",
+    "UpdateClusterConfig"
+  ],
+  "aws.elasticloadbalancing": [
+    "ApplySecurityGroupsToLoadBalancer",
+    "CreateListener",
+    "CreateLoadBalancer",
+    "SetSecurityGroups"
+  ],
+  "aws.es": [
+    "CreateDomain",
+    "CreateElasticsearchDomain",
+    "UpdateDomainConfig",
+    "UpdateElasticsearchDomainConfig"
+  ],
+  "aws.lambda": [
+    "AddPermission",
+    "CreateFunctionUrlConfig",
+    "UpdateFunctionUrlConfig"
+  ],
+  "aws.lightsail": [
+    "OpenInstancePublicPorts",
+    "PutInstancePublicPorts"
+  ],
+  "aws.rds": [
+    "CreateDBInstance",
+    "CreateDBInstanceReadReplica",
+    "ModifyDBInstance",
+    "RestoreDBInstanceFromDBSnapshot",
+    "RestoreDBInstanceFromS3",
+    "RestoreDBInstanceToPointInTime"
+  ],
+  "aws.s3": [
+    "DeleteAccountPublicAccessBlock",
+    "DeleteBucketPublicAccessBlock",
+    "PutAccountPublicAccessBlock",
+    "PutBucketPolicy",
+    "PutBucketPublicAccessBlock",
+    "PutBucketWebsite"
+  ]
+}

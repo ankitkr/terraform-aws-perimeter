@@ -1,0 +1,4876 @@
+{
+ "sg_ingress_ssh_world": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-000000001389",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:01Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:01Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "AuthorizeSecurityGroupIngress",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "groupId": "sg-0abc1234",
+    "ipPermissions": {
+     "items": [
+      {
+       "ipProtocol": "tcp",
+       "fromPort": 22,
+       "toPort": 22,
+       "groups": {},
+       "ipRanges": {
+        "items": [
+         {
+          "cidrIp": "0.0.0.0/0"
+         }
+        ]
+       },
+       "ipv6Ranges": {},
+       "prefixListIds": {}
+      }
+     ]
+    }
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true,
+    "securityGroupRuleSet": {
+     "items": [
+      {
+       "groupOwnerId": "222222222222",
+       "groupId": "sg-0abc1234",
+       "securityGroupRuleId": "sgr-0f00d",
+       "isEgress": false,
+       "ipProtocol": "tcp",
+       "fromPort": 22,
+       "toPort": 22,
+       "cidrIpv4": "0.0.0.0/0"
+      }
+     ]
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003e9",
+   "eventID": "00000000-0000-0000-0000-000000000001",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "sg_ingress_https_ipv6": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-00000000138a",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:02Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "IAMUser",
+    "principalId": "AIDAEXAMPLEUSER",
+    "arn": "arn:aws:iam::222222222222:user/deploy-bot",
+    "accountId": "222222222222",
+    "accessKeyId": "AKIAEXAMPLEKEY",
+    "userName": "deploy-bot"
+   },
+   "eventTime": "2026-11-05T10:02:02Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "AuthorizeSecurityGroupIngress",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "groupId": "sg-0web",
+    "ipPermissions": {
+     "items": [
+      {
+       "ipProtocol": "tcp",
+       "fromPort": 443,
+       "toPort": 443,
+       "groups": {},
+       "ipRanges": {},
+       "ipv6Ranges": {
+        "items": [
+         {
+          "cidrIpv6": "::/0"
+         }
+        ]
+       },
+       "prefixListIds": {}
+      }
+     ]
+    }
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true,
+    "securityGroupRuleSet": {
+     "items": [
+      {
+       "groupOwnerId": "222222222222",
+       "groupId": "sg-0web",
+       "securityGroupRuleId": "sgr-06",
+       "isEgress": false,
+       "ipProtocol": "tcp",
+       "fromPort": 443,
+       "toPort": 443,
+       "cidrIpv6": "::/0"
+      }
+     ]
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003ea",
+   "eventID": "00000000-0000-0000-0000-000000000002",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "sg_ingress_private": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-00000000138b",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:03Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:03Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "AuthorizeSecurityGroupIngress",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "groupId": "sg-0app",
+    "ipPermissions": {
+     "items": [
+      {
+       "ipProtocol": "tcp",
+       "fromPort": 5432,
+       "toPort": 5432,
+       "groups": {},
+       "ipRanges": {
+        "items": [
+         {
+          "cidrIp": "10.0.0.0/8"
+         }
+        ]
+       },
+       "ipv6Ranges": {},
+       "prefixListIds": {}
+      }
+     ]
+    }
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true,
+    "securityGroupRuleSet": {
+     "items": [
+      {
+       "groupOwnerId": "222222222222",
+       "groupId": "sg-0app",
+       "securityGroupRuleId": "sgr-07",
+       "isEgress": false,
+       "ipProtocol": "tcp",
+       "fromPort": 5432,
+       "toPort": 5432,
+       "cidrIpv4": "10.0.0.0/8"
+      }
+     ]
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003eb",
+   "eventID": "00000000-0000-0000-0000-000000000003",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "sg_ingress_prefix_list": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-00000000138c",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:04Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:04Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "AuthorizeSecurityGroupIngress",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "groupId": "sg-0vpn",
+    "ipPermissions": {
+     "items": [
+      {
+       "ipProtocol": "tcp",
+       "fromPort": 8443,
+       "toPort": 8443,
+       "groups": {},
+       "ipRanges": {},
+       "ipv6Ranges": {},
+       "prefixListIds": {
+        "items": [
+         {
+          "prefixListId": "pl-0office"
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true,
+    "securityGroupRuleSet": {
+     "items": [
+      {
+       "groupOwnerId": "222222222222",
+       "groupId": "sg-0vpn",
+       "securityGroupRuleId": "sgr-08",
+       "isEgress": false,
+       "ipProtocol": "tcp",
+       "fromPort": 8443,
+       "toPort": 8443,
+       "prefixListId": "pl-0office"
+      }
+     ]
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003ec",
+   "eventID": "00000000-0000-0000-0000-000000000004",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "sg_ingress_group_ref": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-00000000138d",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:05Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:05Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "AuthorizeSecurityGroupIngress",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "groupId": "sg-0db",
+    "ipPermissions": {
+     "items": [
+      {
+       "ipProtocol": "tcp",
+       "fromPort": 3306,
+       "toPort": 3306,
+       "groups": {
+        "items": [
+         {
+          "groupId": "sg-0app"
+         }
+        ]
+       },
+       "ipRanges": {},
+       "ipv6Ranges": {},
+       "prefixListIds": {}
+      }
+     ]
+    }
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true,
+    "securityGroupRuleSet": {
+     "items": [
+      {
+       "groupOwnerId": "222222222222",
+       "groupId": "sg-0db",
+       "securityGroupRuleId": "sgr-09",
+       "isEgress": false,
+       "ipProtocol": "tcp",
+       "fromPort": 3306,
+       "toPort": 3306,
+       "referencedGroupInfo": {
+        "groupId": "sg-0app",
+        "userId": "222222222222"
+       }
+      }
+     ]
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003ed",
+   "eventID": "00000000-0000-0000-0000-000000000005",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "sg_ingress_all_traffic": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-00000000138e",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:06Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "Root",
+    "principalId": "222222222222",
+    "arn": "arn:aws:iam::222222222222:root",
+    "accountId": "222222222222"
+   },
+   "eventTime": "2026-11-05T10:02:06Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "AuthorizeSecurityGroupIngress",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "groupId": "sg-0debug",
+    "ipPermissions": {
+     "items": [
+      {
+       "ipProtocol": "-1",
+       "fromPort": null,
+       "toPort": null,
+       "groups": {},
+       "ipRanges": {
+        "items": [
+         {
+          "cidrIp": "0.0.0.0/0"
+         }
+        ]
+       },
+       "ipv6Ranges": {},
+       "prefixListIds": {}
+      }
+     ]
+    }
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true,
+    "securityGroupRuleSet": {
+     "items": [
+      {
+       "groupOwnerId": "222222222222",
+       "groupId": "sg-0debug",
+       "securityGroupRuleId": "sgr-0a",
+       "isEgress": false,
+       "ipProtocol": "-1",
+       "fromPort": -1,
+       "toPort": -1,
+       "cidrIpv4": "0.0.0.0/0"
+      }
+     ]
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003ee",
+   "eventID": "00000000-0000-0000-0000-000000000006",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "modify_sg_rule_rdp_world": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-00000000138f",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:07Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:07Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "ModifySecurityGroupRules",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "ModifySecurityGroupRulesRequest": {
+     "GroupId": "sg-0win",
+     "SecurityGroupRule": {
+      "SecurityGroupRuleId": "sgr-0rdp",
+      "SecurityGroupRule": {
+       "Description": "",
+       "IpProtocol": "tcp",
+       "FromPort": 3389,
+       "ToPort": 3389,
+       "CidrIpv4": "0.0.0.0/0"
+      },
+      "tag": 1
+     }
+    }
+   },
+   "responseElements": {
+    "ModifySecurityGroupRulesResponse": {
+     "xmlns": "http://ec2.amazonaws.com/doc/2016-11-15/",
+     "requestId": "r",
+     "return": true
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003ef",
+   "eventID": "00000000-0000-0000-0000-000000000007",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "modify_sg_rule_to_office": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-000000001390",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:08Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:08Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "ModifySecurityGroupRules",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "ModifySecurityGroupRulesRequest": {
+     "GroupId": "sg-0win",
+     "SecurityGroupRule": {
+      "SecurityGroupRuleId": "sgr-0rdp",
+      "SecurityGroupRule": {
+       "IpProtocol": "tcp",
+       "FromPort": 3389,
+       "ToPort": 3389,
+       "CidrIpv4": "10.20.0.0/16"
+      },
+      "tag": 1
+     }
+    }
+   },
+   "responseElements": {
+    "ModifySecurityGroupRulesResponse": {
+     "return": true
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003f0",
+   "eventID": "00000000-0000-0000-0000-000000000008",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "nacl_entry_ingress_world": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-000000001391",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:09Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:09Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "CreateNetworkAclEntry",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "networkAclId": "acl-0123",
+    "ruleNumber": 90,
+    "egress": false,
+    "ruleAction": "allow",
+    "icmpTypeCode": {},
+    "portRange": {
+     "from": 22,
+     "to": 22
+    },
+    "aclProtocol": "6",
+    "cidrBlock": "0.0.0.0/0"
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003f1",
+   "eventID": "00000000-0000-0000-0000-000000000009",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "nacl_entry_egress_world": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-000000001392",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:10Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:10Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "CreateNetworkAclEntry",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "networkAclId": "acl-0123",
+    "ruleNumber": 90,
+    "egress": true,
+    "ruleAction": "allow",
+    "icmpTypeCode": {},
+    "portRange": {
+     "from": 1024,
+     "to": 65535
+    },
+    "aclProtocol": "6",
+    "cidrBlock": "0.0.0.0/0"
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003f2",
+   "eventID": "00000000-0000-0000-0000-00000000000a",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "replace_nacl_entry_deny": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-000000001393",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:11Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:11Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "ReplaceNetworkAclEntry",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "networkAclId": "acl-0123",
+    "ruleNumber": 100,
+    "egress": false,
+    "ruleAction": "deny",
+    "icmpTypeCode": {},
+    "portRange": {},
+    "aclProtocol": "-1",
+    "cidrBlock": "0.0.0.0/0"
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003f3",
+   "eventID": "00000000-0000-0000-0000-00000000000b",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "replace_nacl_association": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-000000001394",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:12Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:12Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "ReplaceNetworkAclAssociation",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "associationId": "aclassoc-0aa",
+    "networkAclId": "acl-0open"
+   },
+   "responseElements": {
+    "requestId": "r",
+    "newAssociationId": "aclassoc-0bb"
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003f4",
+   "eventID": "00000000-0000-0000-0000-00000000000c",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "create_route_igw": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-000000001395",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:13Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:13Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "CreateRoute",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "routeTableId": "rtb-0priv",
+    "destinationCidrBlock": "0.0.0.0/0",
+    "gatewayId": "igw-0abc"
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003f5",
+   "eventID": "00000000-0000-0000-0000-00000000000d",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "create_route_nat": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-000000001396",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:14Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:14Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "CreateRoute",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "routeTableId": "rtb-0priv",
+    "destinationCidrBlock": "0.0.0.0/0",
+    "natGatewayId": "nat-0abc"
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003f6",
+   "eventID": "00000000-0000-0000-0000-00000000000e",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "replace_route_igw_ipv6": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-000000001397",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:15Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:15Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "ReplaceRoute",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "routeTableId": "rtb-0priv",
+    "destinationIpv6CidrBlock": "::/0",
+    "gatewayId": "igw-0abc"
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003f7",
+   "eventID": "00000000-0000-0000-0000-00000000000f",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "associate_route_table": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-000000001398",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:16Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:16Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "AssociateRouteTable",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "routeTableId": "rtb-0pub",
+    "subnetId": "subnet-0db"
+   },
+   "responseElements": {
+    "requestId": "r",
+    "associationId": "rtbassoc-0cc",
+    "associationState": {
+     "state": "associated"
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003f8",
+   "eventID": "00000000-0000-0000-0000-000000000010",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "replace_route_table_association": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-000000001399",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:17Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:17Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "ReplaceRouteTableAssociation",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "associationId": "rtbassoc-0cc",
+    "routeTableId": "rtb-0pub"
+   },
+   "responseElements": {
+    "requestId": "r",
+    "newAssociationId": "rtbassoc-0dd",
+    "associationState": {
+     "state": "associated"
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003f9",
+   "eventID": "00000000-0000-0000-0000-000000000011",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "attach_igw": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-00000000139a",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:18Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:18Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "AttachInternetGateway",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "internetGatewayId": "igw-0new",
+    "vpcId": "vpc-0data"
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003fa",
+   "eventID": "00000000-0000-0000-0000-000000000012",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "modify_instance_groupset": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-00000000139b",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:19Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:19Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "ModifyInstanceAttribute",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "instanceId": "i-0abc",
+    "groupSet": {
+     "items": [
+      {
+       "groupId": "sg-0abc1234"
+      },
+      {
+       "groupId": "sg-0debug"
+      }
+     ]
+    }
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003fb",
+   "eventID": "00000000-0000-0000-0000-000000000013",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "modify_instance_type": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-00000000139c",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:20Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:20Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "ModifyInstanceAttribute",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "instanceId": "i-0abc",
+    "instanceType": {
+     "value": "m7g.large"
+    }
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003fc",
+   "eventID": "00000000-0000-0000-0000-000000000014",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "modify_eni_groups": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-00000000139d",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:21Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:21Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "ModifyNetworkInterfaceAttribute",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "networkInterfaceId": "eni-0abc",
+    "groupSet": {
+     "items": [
+      {
+       "groupId": "sg-0debug"
+      }
+     ]
+    }
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003fd",
+   "eventID": "00000000-0000-0000-0000-000000000015",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "modify_subnet_public_ip": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-00000000139e",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:22Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:22Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "ModifySubnetAttribute",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "subnetId": "subnet-0app",
+    "mapPublicIpOnLaunch": {
+     "value": true
+    }
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003fe",
+   "eventID": "00000000-0000-0000-0000-000000000016",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "modify_subnet_public_ip_off": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-00000000139f",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:23Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:23Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "ModifySubnetAttribute",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "subnetId": "subnet-0app",
+    "mapPublicIpOnLaunch": {
+     "value": false
+    }
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true
+   },
+   "requestID": "00000000-0000-0000-0000-0000000003ff",
+   "eventID": "00000000-0000-0000-0000-000000000017",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "run_instances_public": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013a0",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:24Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:24Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "RunInstances",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "instancesSet": {
+     "items": [
+      {
+       "imageId": "ami-0abc",
+       "minCount": 1,
+       "maxCount": 1
+      }
+     ]
+    },
+    "instanceType": "t4g.small",
+    "blockDeviceMapping": {},
+    "monitoring": {
+     "enabled": false
+    },
+    "disableApiTermination": false,
+    "disableApiStop": false,
+    "networkInterfaceSet": {
+     "items": [
+      {
+       "deviceIndex": 0,
+       "subnetId": "subnet-0pub",
+       "associatePublicIpAddress": true,
+       "groupSet": {
+        "items": [
+         {
+          "groupId": "sg-0web"
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "responseElements": {
+    "requestId": "r",
+    "reservationId": "r-0abc",
+    "ownerId": "222222222222",
+    "groupSet": {},
+    "instancesSet": {
+     "items": [
+      {
+       "instanceId": "i-0new",
+       "imageId": "ami-0abc",
+       "currentInstanceBootMode": "uefi",
+       "instanceState": {
+        "code": 0,
+        "name": "pending"
+       },
+       "privateDnsName": "ip-10-0-1-23.ap-south-1.compute.internal",
+       "privateIpAddress": "10.0.1.23",
+       "subnetId": "subnet-0pub",
+       "vpcId": "vpc-0main",
+       "networkInterfaceSet": {
+        "items": [
+         {
+          "networkInterfaceId": "eni-0new",
+          "subnetId": "subnet-0pub",
+          "vpcId": "vpc-0main",
+          "status": "in-use",
+          "privateIpAddress": "10.0.1.23",
+          "groupSet": {
+           "items": [
+            {
+             "groupId": "sg-0web",
+             "groupName": "web"
+            }
+           ]
+          },
+          "attachment": {
+           "attachmentId": "eni-attach-0",
+           "deviceIndex": 0,
+           "status": "attaching"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-000000000400",
+   "eventID": "00000000-0000-0000-0000-000000000018",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "run_instances_private": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013a1",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:25Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:25Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "RunInstances",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "instancesSet": {
+     "items": [
+      {
+       "imageId": "ami-0abc",
+       "minCount": 1,
+       "maxCount": 1
+      }
+     ]
+    },
+    "instanceType": "t4g.small",
+    "subnetId": "subnet-0priv"
+   },
+   "responseElements": {
+    "requestId": "r",
+    "reservationId": "r-0abd",
+    "ownerId": "222222222222",
+    "instancesSet": {
+     "items": [
+      {
+       "instanceId": "i-0priv",
+       "privateIpAddress": "10.0.9.4",
+       "subnetId": "subnet-0priv",
+       "networkInterfaceSet": {
+        "items": [
+         {
+          "networkInterfaceId": "eni-0priv",
+          "privateIpAddress": "10.0.9.4"
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-000000000401",
+   "eventID": "00000000-0000-0000-0000-000000000019",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "associate_address": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013a2",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:26Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:26Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "AssociateAddress",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "allocationId": "eipalloc-0abc",
+    "instanceId": "i-0abc",
+    "allowReassociation": false
+   },
+   "responseElements": {
+    "requestId": "r",
+    "_return": true,
+    "associationId": "eipassoc-0abc"
+   },
+   "requestID": "00000000-0000-0000-0000-000000000402",
+   "eventID": "00000000-0000-0000-0000-00000000001a",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "create_alb_internet": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013a3",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.elasticloadbalancing",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:27Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:27Z",
+   "eventSource": "elasticloadbalancing.amazonaws.com",
+   "eventName": "CreateLoadBalancer",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "name": "api-prod",
+    "subnets": [
+     "subnet-0a",
+     "subnet-0b"
+    ],
+    "securityGroups": [
+     "sg-0lb"
+    ],
+    "scheme": "internet-facing",
+    "type": "application",
+    "ipAddressType": "ipv4"
+   },
+   "responseElements": {
+    "loadBalancers": [
+     {
+      "loadBalancerArn": "arn:aws:elasticloadbalancing:ap-south-1:222222222222:loadbalancer/app/api-prod/50dc6c495c0c9188",
+      "dNSName": "api-prod-1.ap-south-1.elb.amazonaws.com",
+      "scheme": "internet-facing",
+      "type": "application"
+     }
+    ]
+   },
+   "requestID": "00000000-0000-0000-0000-000000000403",
+   "eventID": "00000000-0000-0000-0000-00000000001b",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "elasticloadbalancing.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "create_alb_internal": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013a4",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.elasticloadbalancing",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:28Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:28Z",
+   "eventSource": "elasticloadbalancing.amazonaws.com",
+   "eventName": "CreateLoadBalancer",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "name": "api-internal",
+    "subnets": [
+     "subnet-0a",
+     "subnet-0b"
+    ],
+    "scheme": "internal",
+    "type": "application"
+   },
+   "responseElements": {
+    "loadBalancers": [
+     {
+      "loadBalancerArn": "arn:aws:elasticloadbalancing:ap-south-1:222222222222:loadbalancer/app/api-internal/1",
+      "scheme": "internal"
+     }
+    ]
+   },
+   "requestID": "00000000-0000-0000-0000-000000000404",
+   "eventID": "00000000-0000-0000-0000-00000000001c",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "elasticloadbalancing.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "create_clb_default_scheme": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013a5",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.elasticloadbalancing",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:29Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:29Z",
+   "eventSource": "elasticloadbalancing.amazonaws.com",
+   "eventName": "CreateLoadBalancer",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "loadBalancerName": "legacy-web",
+    "listeners": [
+     {
+      "protocol": "HTTP",
+      "loadBalancerPort": 80,
+      "instanceProtocol": "HTTP",
+      "instancePort": 80
+     }
+    ],
+    "subnets": [
+     "subnet-0a"
+    ],
+    "securityGroups": [
+     "sg-0lb"
+    ]
+   },
+   "responseElements": {
+    "dNSName": "legacy-web-1.ap-south-1.elb.amazonaws.com"
+   },
+   "requestID": "00000000-0000-0000-0000-000000000405",
+   "eventID": "00000000-0000-0000-0000-00000000001d",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "elasticloadbalancing.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "create_listener": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013a6",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.elasticloadbalancing",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:30Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:30Z",
+   "eventSource": "elasticloadbalancing.amazonaws.com",
+   "eventName": "CreateListener",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "loadBalancerArn": "arn:aws:elasticloadbalancing:ap-south-1:222222222222:loadbalancer/net/edge/7a3f",
+    "protocol": "TCP",
+    "port": 6379,
+    "defaultActions": [
+     {
+      "type": "forward",
+      "targetGroupArn": "arn:aws:elasticloadbalancing:ap-south-1:222222222222:targetgroup/cache/1"
+     }
+    ]
+   },
+   "responseElements": {
+    "listeners": [
+     {
+      "listenerArn": "arn:listener",
+      "port": 6379,
+      "protocol": "TCP"
+     }
+    ]
+   },
+   "requestID": "00000000-0000-0000-0000-000000000406",
+   "eventID": "00000000-0000-0000-0000-00000000001e",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "elasticloadbalancing.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "set_security_groups": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013a7",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.elasticloadbalancing",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:31Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:31Z",
+   "eventSource": "elasticloadbalancing.amazonaws.com",
+   "eventName": "SetSecurityGroups",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "loadBalancerArn": "arn:aws:elasticloadbalancing:ap-south-1:222222222222:loadbalancer/app/api-prod/50dc6c495c0c9188",
+    "securityGroups": [
+     "sg-0debug"
+    ]
+   },
+   "responseElements": {
+    "securityGroupIds": [
+     "sg-0debug"
+    ]
+   },
+   "requestID": "00000000-0000-0000-0000-000000000407",
+   "eventID": "00000000-0000-0000-0000-00000000001f",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "elasticloadbalancing.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "apply_sgs_clb": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013a8",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.elasticloadbalancing",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:32Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:32Z",
+   "eventSource": "elasticloadbalancing.amazonaws.com",
+   "eventName": "ApplySecurityGroupsToLoadBalancer",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "loadBalancerName": "legacy-web",
+    "securityGroups": [
+     "sg-0debug"
+    ]
+   },
+   "responseElements": {
+    "securityGroups": [
+     "sg-0debug"
+    ]
+   },
+   "requestID": "00000000-0000-0000-0000-000000000408",
+   "eventID": "00000000-0000-0000-0000-000000000020",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "elasticloadbalancing.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "create_function_url_none": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013a9",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.lambda",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:33Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:33Z",
+   "eventSource": "lambda.amazonaws.com",
+   "eventName": "CreateFunctionUrlConfig20211031",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "functionName": "webhook",
+    "authType": "NONE"
+   },
+   "responseElements": {
+    "functionUrl": "https://abcdefghijklmnopqrstuvwxyz012345.lambda-url.ap-south-1.on.aws/",
+    "functionArn": "arn:aws:lambda:ap-south-1:222222222222:function:webhook",
+    "authType": "NONE",
+    "creationTime": "2026-11-05T10:02:30.000+0000"
+   },
+   "requestID": "00000000-0000-0000-0000-000000000409",
+   "eventID": "00000000-0000-0000-0000-000000000021",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "lambda.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "update_function_url_iam": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013aa",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.lambda",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:34Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:34Z",
+   "eventSource": "lambda.amazonaws.com",
+   "eventName": "UpdateFunctionUrlConfig20211031",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "functionName": "webhook",
+    "authType": "AWS_IAM"
+   },
+   "responseElements": {
+    "functionUrl": "https://abcdefghijklmnopqrstuvwxyz012345.lambda-url.ap-south-1.on.aws/",
+    "authType": "AWS_IAM"
+   },
+   "requestID": "00000000-0000-0000-0000-00000000040a",
+   "eventID": "00000000-0000-0000-0000-000000000022",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "lambda.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "add_permission_public_url": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013ab",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.lambda",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:35Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:35Z",
+   "eventSource": "lambda.amazonaws.com",
+   "eventName": "AddPermission20150331v2",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "functionName": "arn:aws:lambda:ap-south-1:222222222222:function:webhook",
+    "statementId": "FunctionURLAllowPublicAccess",
+    "action": "lambda:InvokeFunctionUrl",
+    "principal": "*",
+    "functionUrlAuthType": "NONE"
+   },
+   "responseElements": {
+    "statement": "{\"Sid\":\"FunctionURLAllowPublicAccess\",\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"lambda:InvokeFunctionUrl\",\"Resource\":\"arn:aws:lambda:ap-south-1:222222222222:function:webhook\",\"Condition\":{\"StringEquals\":{\"lambda:FunctionUrlAuthType\":\"NONE\"}}}"
+   },
+   "requestID": "00000000-0000-0000-0000-00000000040b",
+   "eventID": "00000000-0000-0000-0000-000000000023",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "lambda.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "add_permission_s3": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013ac",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.lambda",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:36Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:36Z",
+   "eventSource": "lambda.amazonaws.com",
+   "eventName": "AddPermission20150331v2",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "functionName": "thumbnailer",
+    "statementId": "s3",
+    "action": "lambda:InvokeFunction",
+    "principal": "s3.amazonaws.com",
+    "sourceArn": "arn:aws:s3:::uploads",
+    "sourceAccount": "222222222222"
+   },
+   "responseElements": {
+    "statement": "{}"
+   },
+   "requestID": "00000000-0000-0000-0000-00000000040c",
+   "eventID": "00000000-0000-0000-0000-000000000024",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "lambda.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "create_db_public": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013ad",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.rds",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:37Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:37Z",
+   "eventSource": "rds.amazonaws.com",
+   "eventName": "CreateDBInstance",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "dBInstanceIdentifier": "reports",
+    "dBInstanceClass": "db.t4g.micro",
+    "engine": "postgres",
+    "masterUsername": "postgres",
+    "masterUserPassword": "HIDDEN_DUE_TO_SECURITY_REASONS",
+    "allocatedStorage": 20,
+    "publiclyAccessible": true
+   },
+   "responseElements": {
+    "dBInstanceIdentifier": "reports",
+    "dBInstanceStatus": "creating",
+    "engine": "postgres",
+    "publiclyAccessible": true,
+    "dBInstanceArn": "arn:aws:rds:ap-south-1:222222222222:db:reports"
+   },
+   "requestID": "00000000-0000-0000-0000-00000000040d",
+   "eventID": "00000000-0000-0000-0000-000000000025",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "rds.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "create_db_default_public": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013ae",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.rds",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:38Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:38Z",
+   "eventSource": "rds.amazonaws.com",
+   "eventName": "CreateDBInstance",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "dBInstanceIdentifier": "scratch",
+    "dBInstanceClass": "db.t4g.micro",
+    "engine": "mysql",
+    "allocatedStorage": 20
+   },
+   "responseElements": {
+    "dBInstanceIdentifier": "scratch",
+    "dBInstanceStatus": "creating",
+    "publiclyAccessible": true
+   },
+   "requestID": "00000000-0000-0000-0000-00000000040e",
+   "eventID": "00000000-0000-0000-0000-000000000026",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "rds.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "create_db_private": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013af",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.rds",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:39Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:39Z",
+   "eventSource": "rds.amazonaws.com",
+   "eventName": "CreateDBInstance",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "dBInstanceIdentifier": "app",
+    "engine": "postgres",
+    "publiclyAccessible": false
+   },
+   "responseElements": {
+    "dBInstanceIdentifier": "app",
+    "publiclyAccessible": false
+   },
+   "requestID": "00000000-0000-0000-0000-00000000040f",
+   "eventID": "00000000-0000-0000-0000-000000000027",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "rds.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "modify_db_public": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013b0",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.rds",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:40Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:40Z",
+   "eventSource": "rds.amazonaws.com",
+   "eventName": "ModifyDBInstance",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "dBInstanceIdentifier": "app",
+    "publiclyAccessible": true,
+    "applyImmediately": true
+   },
+   "responseElements": {
+    "dBInstanceIdentifier": "app",
+    "publiclyAccessible": false,
+    "pendingModifiedValues": {}
+   },
+   "requestID": "00000000-0000-0000-0000-000000000410",
+   "eventID": "00000000-0000-0000-0000-000000000028",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "rds.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "restore_db_snapshot_public": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013b1",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.rds",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:41Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:41Z",
+   "eventSource": "rds.amazonaws.com",
+   "eventName": "RestoreDBInstanceFromDBSnapshot",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "dBInstanceIdentifier": "app-restore",
+    "dBSnapshotIdentifier": "rds:app-2026-11-04",
+    "publiclyAccessible": true
+   },
+   "responseElements": {
+    "dBInstanceIdentifier": "app-restore",
+    "publiclyAccessible": true
+   },
+   "requestID": "00000000-0000-0000-0000-000000000411",
+   "eventID": "00000000-0000-0000-0000-000000000029",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "rds.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "opensearch_create_public": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013b2",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.es",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:42Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:42Z",
+   "eventSource": "es.amazonaws.com",
+   "eventName": "CreateDomain",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "domainName": "logs",
+    "engineVersion": "OpenSearch_2.19",
+    "clusterConfig": {
+     "instanceType": "t3.small.search",
+     "instanceCount": 1
+    }
+   },
+   "responseElements": {
+    "domainStatus": {
+     "domainId": "222222222222/logs",
+     "domainName": "logs",
+     "aRN": "arn:aws:es:ap-south-1:222222222222:domain/logs",
+     "created": true
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-000000000412",
+   "eventID": "00000000-0000-0000-0000-00000000002a",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "es.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "opensearch_create_vpc": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013b3",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.es",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:43Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:43Z",
+   "eventSource": "es.amazonaws.com",
+   "eventName": "CreateDomain",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "domainName": "search",
+    "vPCOptions": {
+     "subnetIds": [
+      "subnet-0a"
+     ],
+     "securityGroupIds": [
+      "sg-0os"
+     ]
+    }
+   },
+   "responseElements": {
+    "domainStatus": {
+     "domainName": "search",
+     "vPCOptions": {
+      "vPCId": "vpc-0main",
+      "subnetIds": [
+       "subnet-0a"
+      ]
+     }
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-000000000413",
+   "eventID": "00000000-0000-0000-0000-00000000002b",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "es.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "opensearch_update_public": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013b4",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.es",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:44Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:44Z",
+   "eventSource": "es.amazonaws.com",
+   "eventName": "UpdateDomainConfig",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "domainName": "logs",
+    "accessPolicies": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"*\"},\"Action\":\"es:*\",\"Resource\":\"*\"}]}"
+   },
+   "responseElements": {
+    "domainConfig": {
+     "accessPolicies": {
+      "options": "...",
+      "status": {
+       "state": "Processing"
+      }
+     }
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-000000000414",
+   "eventID": "00000000-0000-0000-0000-00000000002c",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "es.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "eks_create_default": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013b5",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.eks",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:45Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:45Z",
+   "eventSource": "eks.amazonaws.com",
+   "eventName": "CreateCluster",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "name": "main",
+    "version": "1.34",
+    "roleArn": "arn:aws:iam::222222222222:role/eks",
+    "resourcesVpcConfig": {
+     "subnetIds": [
+      "subnet-0a",
+      "subnet-0b"
+     ],
+     "securityGroupIds": []
+    }
+   },
+   "responseElements": {
+    "cluster": {
+     "name": "main",
+     "status": "CREATING",
+     "resourcesVpcConfig": {
+      "endpointPublicAccess": true,
+      "endpointPrivateAccess": false,
+      "publicAccessCidrs": [
+       "0.0.0.0/0"
+      ]
+     }
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-000000000415",
+   "eventID": "00000000-0000-0000-0000-00000000002d",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "eks.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "eks_update_private": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013b6",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.eks",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:46Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:46Z",
+   "eventSource": "eks.amazonaws.com",
+   "eventName": "UpdateClusterConfig",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "name": "main",
+    "resourcesVpcConfig": {
+     "endpointPublicAccess": false,
+     "endpointPrivateAccess": true
+    }
+   },
+   "responseElements": {
+    "update": {
+     "id": "u-1",
+     "status": "InProgress",
+     "type": "EndpointAccessUpdate"
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-000000000416",
+   "eventID": "00000000-0000-0000-0000-00000000002e",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "eks.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "eks_update_logging": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013b7",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.eks",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:47Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:47Z",
+   "eventSource": "eks.amazonaws.com",
+   "eventName": "UpdateClusterConfig",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "name": "main",
+    "logging": {
+     "clusterLogging": [
+      {
+       "types": [
+        "api"
+       ],
+       "enabled": true
+      }
+     ]
+    }
+   },
+   "responseElements": {
+    "update": {
+     "id": "u-2",
+     "type": "LoggingUpdate"
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-000000000417",
+   "eventID": "00000000-0000-0000-0000-00000000002f",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "eks.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "eks_update_office_cidr": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013b8",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.eks",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:48Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:48Z",
+   "eventSource": "eks.amazonaws.com",
+   "eventName": "UpdateClusterConfig",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "name": "main",
+    "resourcesVpcConfig": {
+     "endpointPublicAccess": true,
+     "publicAccessCidrs": [
+      "198.51.100.0/24"
+     ]
+    }
+   },
+   "responseElements": {
+    "update": {
+     "id": "u-3",
+     "type": "EndpointAccessUpdate"
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-000000000418",
+   "eventID": "00000000-0000-0000-0000-000000000030",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "eks.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "s3_put_website": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013b9",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.s3",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:49Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:49Z",
+   "eventSource": "s3.amazonaws.com",
+   "eventName": "PutBucketWebsite",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "bucketName": "acme-site",
+    "Host": "acme-site.s3.ap-south-1.amazonaws.com",
+    "website": "",
+    "WebsiteConfiguration": {
+     "xmlns": "http://s3.amazonaws.com/doc/2006-03-01/",
+     "IndexDocument": {
+      "Suffix": "index.html"
+     }
+    }
+   },
+   "responseElements": null,
+   "requestID": "00000000-0000-0000-0000-000000000419",
+   "eventID": "00000000-0000-0000-0000-000000000031",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "s3.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "s3_policy_public_read": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013ba",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.s3",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:50Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:50Z",
+   "eventSource": "s3.amazonaws.com",
+   "eventName": "PutBucketPolicy",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "bucketName": "acme-site",
+    "Host": "acme-site.s3.ap-south-1.amazonaws.com",
+    "policy": "",
+    "bucketPolicy": {
+     "Version": "2012-10-17",
+     "Statement": [
+      {
+       "Sid": "PublicRead",
+       "Effect": "Allow",
+       "Principal": "*",
+       "Action": "s3:GetObject",
+       "Resource": "arn:aws:s3:::acme-site/*"
+      }
+     ]
+    }
+   },
+   "responseElements": null,
+   "requestID": "00000000-0000-0000-0000-00000000041a",
+   "eventID": "00000000-0000-0000-0000-000000000032",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "s3.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "s3_policy_cloudfront_only": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013bb",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.s3",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:51Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:51Z",
+   "eventSource": "s3.amazonaws.com",
+   "eventName": "PutBucketPolicy",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "bucketName": "acme-assets",
+    "policy": "",
+    "bucketPolicy": {
+     "Version": "2012-10-17",
+     "Statement": [
+      {
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "cloudfront.amazonaws.com"
+       },
+       "Action": "s3:GetObject",
+       "Resource": "arn:aws:s3:::acme-assets/*",
+       "Condition": {
+        "StringEquals": {
+         "AWS:SourceArn": "arn:aws:cloudfront::222222222222:distribution/E1"
+        }
+       }
+      }
+     ]
+    }
+   },
+   "responseElements": null,
+   "requestID": "00000000-0000-0000-0000-00000000041b",
+   "eventID": "00000000-0000-0000-0000-000000000033",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "s3.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "s3_delete_pab": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013bc",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.s3",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:52Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:52Z",
+   "eventSource": "s3.amazonaws.com",
+   "eventName": "DeleteBucketPublicAccessBlock",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "bucketName": "acme-site",
+    "Host": "acme-site.s3.ap-south-1.amazonaws.com",
+    "publicAccessBlock": ""
+   },
+   "responseElements": null,
+   "requestID": "00000000-0000-0000-0000-00000000041c",
+   "eventID": "00000000-0000-0000-0000-000000000034",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "s3.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "s3_put_pab_off": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013bd",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.s3",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:53Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:53Z",
+   "eventSource": "s3.amazonaws.com",
+   "eventName": "PutBucketPublicAccessBlock",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "bucketName": "acme-site",
+    "publicAccessBlock": "",
+    "PublicAccessBlockConfiguration": {
+     "xmlns": "http://s3.amazonaws.com/doc/2006-03-01/",
+     "RestrictPublicBuckets": false,
+     "BlockPublicPolicy": false,
+     "BlockPublicAcls": true,
+     "IgnorePublicAcls": true
+    }
+   },
+   "responseElements": null,
+   "requestID": "00000000-0000-0000-0000-00000000041d",
+   "eventID": "00000000-0000-0000-0000-000000000035",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "s3.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "s3_put_pab_on": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013be",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.s3",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:54Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:54Z",
+   "eventSource": "s3.amazonaws.com",
+   "eventName": "PutBucketPublicAccessBlock",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "bucketName": "acme-site",
+    "publicAccessBlock": "",
+    "PublicAccessBlockConfiguration": {
+     "RestrictPublicBuckets": true,
+     "BlockPublicPolicy": true,
+     "BlockPublicAcls": true,
+     "IgnorePublicAcls": true
+    }
+   },
+   "responseElements": null,
+   "requestID": "00000000-0000-0000-0000-00000000041e",
+   "eventID": "00000000-0000-0000-0000-000000000036",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "s3.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "cloudfront_create": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013bf",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.cloudfront",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:55Z",
+  "region": "us-east-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:55Z",
+   "eventSource": "cloudfront.amazonaws.com",
+   "eventName": "CreateDistribution2020_05_31",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "distributionConfig": {
+     "callerReference": "c1",
+     "comment": "site",
+     "enabled": true,
+     "origins": {
+      "quantity": 1,
+      "items": [
+       {
+        "id": "s3",
+        "domainName": "acme-site.s3.amazonaws.com"
+       }
+      ]
+     }
+    }
+   },
+   "responseElements": {
+    "distribution": {
+     "id": "E2QWRUHEXAMPLE",
+     "aRN": "arn:aws:cloudfront::222222222222:distribution/E2QWRUHEXAMPLE",
+     "status": "InProgress",
+     "domainName": "d111111abcdef8.cloudfront.net"
+    },
+    "location": "https://cloudfront.amazonaws.com/2020-05-31/distribution/E2QWRUHEXAMPLE",
+    "eTag": "E2"
+   },
+   "requestID": "00000000-0000-0000-0000-00000000041f",
+   "eventID": "00000000-0000-0000-0000-000000000037",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "cloudfront.us-east-1.amazonaws.com"
+   }
+  }
+ },
+ "apigw_create_rest": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013c0",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.apigateway",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:56Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:56Z",
+   "eventSource": "apigateway.amazonaws.com",
+   "eventName": "CreateRestApi",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "name": "orders",
+    "endpointConfiguration": {
+     "types": [
+      "REGIONAL"
+     ]
+    }
+   },
+   "responseElements": {
+    "id": "a1b2c3d4e5",
+    "name": "orders",
+    "createdDate": "Nov 5, 2026 10:02:51 AM"
+   },
+   "requestID": "00000000-0000-0000-0000-000000000420",
+   "eventID": "00000000-0000-0000-0000-000000000038",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "apigateway.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "apigw_create_http": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013c1",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.apigateway",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:57Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:57Z",
+   "eventSource": "apigateway.amazonaws.com",
+   "eventName": "CreateApi",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "name": "hooks",
+    "protocolType": "HTTP"
+   },
+   "responseElements": {
+    "apiId": "f6g7h8i9j0",
+    "name": "hooks",
+    "apiEndpoint": "https://f6g7h8i9j0.execute-api.ap-south-1.amazonaws.com",
+    "protocolType": "HTTP"
+   },
+   "requestID": "00000000-0000-0000-0000-000000000421",
+   "eventID": "00000000-0000-0000-0000-000000000039",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "apigateway.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "apigw_create_stage": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013c2",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.apigateway",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:58Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:58Z",
+   "eventSource": "apigateway.amazonaws.com",
+   "eventName": "CreateStage",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "restApiId": "a1b2c3d4e5",
+    "stageName": "prod",
+    "deploymentId": "d1"
+   },
+   "responseElements": {
+    "stageName": "prod",
+    "deploymentId": "d1"
+   },
+   "requestID": "00000000-0000-0000-0000-000000000422",
+   "eventID": "00000000-0000-0000-0000-00000000003a",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "apigateway.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "lightsail_open_ports": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013c3",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.lightsail",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:59Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:59Z",
+   "eventSource": "lightsail.amazonaws.com",
+   "eventName": "OpenInstancePublicPorts",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "instanceName": "blog",
+    "portInfo": {
+     "fromPort": 3306,
+     "toPort": 3306,
+     "protocol": "tcp",
+     "cidrs": [
+      "0.0.0.0/0"
+     ]
+    }
+   },
+   "responseElements": {
+    "operation": {
+     "id": "op-1",
+     "resourceName": "blog",
+     "operationType": "OpenInstancePublicPorts",
+     "status": "Succeeded"
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-000000000423",
+   "eventID": "00000000-0000-0000-0000-00000000003b",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "lightsail.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "lightsail_put_ports": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013c4",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.lightsail",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:60Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:60Z",
+   "eventSource": "lightsail.amazonaws.com",
+   "eventName": "PutInstancePublicPorts",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "instanceName": "blog",
+    "portInfos": [
+     {
+      "fromPort": 443,
+      "toPort": 443,
+      "protocol": "tcp"
+     },
+     {
+      "fromPort": 22,
+      "toPort": 22,
+      "protocol": "tcp",
+      "cidrs": [
+       "198.51.100.7/32"
+      ]
+     }
+    ]
+   },
+   "responseElements": {
+    "operation": {
+     "id": "op-2",
+     "status": "Succeeded"
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-000000000424",
+   "eventID": "00000000-0000-0000-0000-00000000003c",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "lightsail.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "failed_call": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013c5",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:61Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:61Z",
+   "eventSource": "ec2.amazonaws.com",
+   "eventName": "AuthorizeSecurityGroupIngress",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "groupId": "sg-0abc1234",
+    "ipPermissions": {
+     "items": [
+      {
+       "ipProtocol": "tcp",
+       "fromPort": 22,
+       "toPort": 22,
+       "groups": {},
+       "ipRanges": {
+        "items": [
+         {
+          "cidrIp": "0.0.0.0/0"
+         }
+        ]
+       },
+       "ipv6Ranges": {},
+       "prefixListIds": {}
+      }
+     ]
+    }
+   },
+   "responseElements": null,
+   "requestID": "00000000-0000-0000-0000-000000000425",
+   "eventID": "00000000-0000-0000-0000-00000000003d",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "ec2.ap-south-1.amazonaws.com"
+   },
+   "errorCode": "Client.UnauthorizedOperation",
+   "errorMessage": "You are not authorized to perform this operation."
+  }
+ },
+ "modify_db_class_only": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013c6",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.rds",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:40Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:40Z",
+   "eventSource": "rds.amazonaws.com",
+   "eventName": "ModifyDBInstance",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "dBInstanceIdentifier": "app",
+    "dBInstanceClass": "db.t4g.large",
+    "applyImmediately": true
+   },
+   "responseElements": {
+    "dBInstanceIdentifier": "app",
+    "dBInstanceClass": "db.t4g.medium",
+    "publiclyAccessible": true,
+    "pendingModifiedValues": {
+     "dBInstanceClass": "db.t4g.large"
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-000000000426",
+   "eventID": "00000000-0000-0000-0000-00000000003e",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "rds.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "s3_put_account_pab_off": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013c7",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.s3",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:53Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:53Z",
+   "eventSource": "s3.amazonaws.com",
+   "eventName": "PutAccountPublicAccessBlock",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "PublicAccessBlockConfiguration": {
+     "xmlns": "http://awss3control.amazonaws.com/doc/2018-08-20/",
+     "RestrictPublicBuckets": false,
+     "BlockPublicPolicy": false,
+     "BlockPublicAcls": true,
+     "IgnorePublicAcls": true
+    },
+    "Host": "222222222222.s3-control.ap-south-1.amazonaws.com"
+   },
+   "responseElements": null,
+   "requestID": "00000000-0000-0000-0000-000000000427",
+   "eventID": "00000000-0000-0000-0000-00000000003f",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "222222222222.s3-control.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "s3_delete_account_pab": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013c8",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.s3",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:52Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:52Z",
+   "eventSource": "s3.amazonaws.com",
+   "eventName": "DeleteAccountPublicAccessBlock",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "Host": "222222222222.s3-control.ap-south-1.amazonaws.com"
+   },
+   "responseElements": null,
+   "requestID": "00000000-0000-0000-0000-000000000428",
+   "eventID": "00000000-0000-0000-0000-000000000040",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "222222222222.s3-control.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "es_create_public": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013c9",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.es",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:42Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:42Z",
+   "eventSource": "es.amazonaws.com",
+   "eventName": "CreateElasticsearchDomain",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "domainName": "legacy-logs",
+    "elasticsearchVersion": "7.10",
+    "elasticsearchClusterConfig": {
+     "instanceType": "t3.small.elasticsearch",
+     "instanceCount": 1
+    }
+   },
+   "responseElements": {
+    "domainStatus": {
+     "domainId": "222222222222/legacy-logs",
+     "domainName": "legacy-logs",
+     "aRN": "arn:aws:es:ap-south-1:222222222222:domain/legacy-logs",
+     "created": true
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-000000000429",
+   "eventID": "00000000-0000-0000-0000-000000000041",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "es.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "es_update_public": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013ca",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.es",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:44Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:44Z",
+   "eventSource": "es.amazonaws.com",
+   "eventName": "UpdateElasticsearchDomainConfig",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "domainName": "legacy-logs",
+    "elasticsearchClusterConfig": {
+     "instanceCount": 2
+    }
+   },
+   "responseElements": {
+    "domainConfig": {
+     "elasticsearchClusterConfig": {
+      "options": {
+       "instanceType": "t3.small.elasticsearch",
+       "instanceCount": 2
+      },
+      "status": {
+       "state": "Processing"
+      }
+     }
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-00000000042a",
+   "eventID": "00000000-0000-0000-0000-000000000042",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "es.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "cloudfront_create_with_tags": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013cb",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.cloudfront",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:55Z",
+  "region": "us-east-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:55Z",
+   "eventSource": "cloudfront.amazonaws.com",
+   "eventName": "CreateDistributionWithTags2020_05_31",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "distributionConfigWithTags": {
+     "distributionConfig": {
+      "callerReference": "c2",
+      "comment": "docs",
+      "enabled": true,
+      "origins": {
+       "quantity": 1,
+       "items": [
+        {
+         "id": "s3",
+         "domainName": "acme-docs.s3.amazonaws.com"
+        }
+       ]
+      }
+     },
+     "tags": {
+      "items": [
+       {
+        "key": "team",
+        "value": "web"
+       }
+      ]
+     }
+    }
+   },
+   "responseElements": {
+    "distribution": {
+     "id": "E3DOCSEXAMPLE",
+     "aRN": "arn:aws:cloudfront::222222222222:distribution/E3DOCSEXAMPLE",
+     "status": "InProgress",
+     "domainName": "d222222abcdef8.cloudfront.net"
+    },
+    "location": "https://cloudfront.amazonaws.com/2020-05-31/distribution/E3DOCSEXAMPLE",
+    "eTag": "E3"
+   },
+   "requestID": "00000000-0000-0000-0000-00000000042b",
+   "eventID": "00000000-0000-0000-0000-000000000043",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "cloudfront.us-east-1.amazonaws.com"
+   }
+  }
+ },
+ "create_db_replica_public": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013cc",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.rds",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:37Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:37Z",
+   "eventSource": "rds.amazonaws.com",
+   "eventName": "CreateDBInstanceReadReplica",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "dBInstanceIdentifier": "reports-replica",
+    "sourceDBInstanceIdentifier": "reports",
+    "dBInstanceClass": "db.t4g.micro",
+    "publiclyAccessible": true
+   },
+   "responseElements": {
+    "dBInstanceIdentifier": "reports-replica",
+    "dBInstanceStatus": "creating",
+    "engine": "postgres",
+    "publiclyAccessible": true,
+    "readReplicaSourceDBInstanceIdentifier": "reports",
+    "dBInstanceArn": "arn:aws:rds:ap-south-1:222222222222:db:reports-replica"
+   },
+   "requestID": "00000000-0000-0000-0000-00000000042c",
+   "eventID": "00000000-0000-0000-0000-000000000044",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "rds.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "restore_db_pitr_default": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013cd",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.rds",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:41Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:41Z",
+   "eventSource": "rds.amazonaws.com",
+   "eventName": "RestoreDBInstanceToPointInTime",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "sourceDBInstanceIdentifier": "app",
+    "targetDBInstanceIdentifier": "app-pitr",
+    "useLatestRestorableTime": true
+   },
+   "responseElements": {
+    "dBInstanceIdentifier": "app-pitr",
+    "dBInstanceStatus": "creating",
+    "publiclyAccessible": true
+   },
+   "requestID": "00000000-0000-0000-0000-00000000042d",
+   "eventID": "00000000-0000-0000-0000-000000000045",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "rds.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "restore_db_s3_private": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013ce",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.rds",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:41Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:41Z",
+   "eventSource": "rds.amazonaws.com",
+   "eventName": "RestoreDBInstanceFromS3",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "dBInstanceIdentifier": "imported",
+    "dBInstanceClass": "db.t4g.medium",
+    "engine": "mysql",
+    "masterUsername": "admin",
+    "masterUserPassword": "HIDDEN_DUE_TO_SECURITY_REASONS",
+    "sourceEngine": "mysql",
+    "sourceEngineVersion": "8.0.36",
+    "s3BucketName": "acme-backups",
+    "s3IngestionRoleArn": "arn:aws:iam::222222222222:role/rds-s3-import",
+    "publiclyAccessible": false
+   },
+   "responseElements": {
+    "dBInstanceIdentifier": "imported",
+    "dBInstanceStatus": "creating",
+    "publiclyAccessible": false
+   },
+   "requestID": "00000000-0000-0000-0000-00000000042e",
+   "eventID": "00000000-0000-0000-0000-000000000046",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "rds.ap-south-1.amazonaws.com"
+   }
+  }
+ },
+ "eks_update_public_existing_cidrs": {
+  "version": "0",
+  "id": "00000000-0000-0000-0000-0000000013cf",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.eks",
+  "account": "222222222222",
+  "time": "2026-11-05T10:02:48Z",
+  "region": "ap-south-1",
+  "resources": [],
+  "detail": {
+   "eventVersion": "1.09",
+   "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAEXAMPLEID:alice@acme.com",
+    "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_AdministratorAccess_0123456789abcdef/alice@acme.com",
+    "accountId": "222222222222",
+    "accessKeyId": "ASIAEXAMPLEKEY",
+    "sessionContext": {
+     "sessionIssuer": {
+      "type": "Role",
+      "principalId": "AROAEXAMPLEID",
+      "arn": "arn:aws:iam::222222222222:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_0123456789abcdef",
+      "accountId": "222222222222",
+      "userName": "AWSReservedSSO_AdministratorAccess_0123456789abcdef"
+     },
+     "attributes": {
+      "creationDate": "2026-11-05T09:58:12Z",
+      "mfaAuthenticated": "false"
+     }
+    }
+   },
+   "eventTime": "2026-11-05T10:02:48Z",
+   "eventSource": "eks.amazonaws.com",
+   "eventName": "UpdateClusterConfig",
+   "awsRegion": "ap-south-1",
+   "sourceIPAddress": "203.0.113.9",
+   "userAgent": "aws-cli/2.31.4 md/awscrt#0.27.6 ua/2.1 os/macos#25.0.0 md/arch#arm64 lang/python#3.13.7",
+   "requestParameters": {
+    "name": "main",
+    "resourcesVpcConfig": {
+     "endpointPublicAccess": true,
+     "endpointPrivateAccess": true
+    }
+   },
+   "responseElements": {
+    "update": {
+     "id": "u-4",
+     "status": "InProgress",
+     "type": "EndpointAccessUpdate",
+     "params": [
+      {
+       "type": "EndpointPublicAccess",
+       "value": "true"
+      },
+      {
+       "type": "EndpointPrivateAccess",
+       "value": "true"
+      }
+     ]
+    }
+   },
+   "requestID": "00000000-0000-0000-0000-00000000042f",
+   "eventID": "00000000-0000-0000-0000-000000000047",
+   "readOnly": false,
+   "eventType": "AwsApiCall",
+   "managementEvent": true,
+   "recipientAccountId": "222222222222",
+   "eventCategory": "Management",
+   "tlsDetails": {
+    "tlsVersion": "TLSv1.3",
+    "cipherSuite": "TLS_AES_128_GCM_SHA256",
+    "clientProvidedHostHeader": "eks.ap-south-1.amazonaws.com"
+   }
+  }
+ }
+}
