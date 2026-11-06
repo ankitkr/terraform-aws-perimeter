@@ -79,7 +79,7 @@ terraform apply                                # with credentials for that accou
 
 ```hcl
 module "perimeter" {
-  source = "github.com/ankitkr/terraform-aws-perimeter?ref=v1.0.0"
+  source = "github.com/ankitkr/terraform-aws-perimeter?ref=v1.0.1"
 
   regions  = ["us-east-1", "ap-south-1"]
   accounts = { staging = "222222222222" }   # optional; this account is always included as "self"
@@ -98,7 +98,7 @@ module "perimeter" {
 
 # In each other account, with that account's provider:
 module "perimeter_member" {
-  source = "github.com/ankitkr/terraform-aws-perimeter//modules/member?ref=v1.0.0"
+  source = "github.com/ankitkr/terraform-aws-perimeter//modules/member?ref=v1.0.1"
 
   scanner_account_id = "111111111111"
   scanner_region     = "us-east-1"

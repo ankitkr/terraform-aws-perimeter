@@ -23,7 +23,7 @@ provider "aws" {
 }
 
 module "perimeter" {
-  source = "github.com/ankitkr/terraform-aws-perimeter?ref=v1.0.0"
+  source = "github.com/ankitkr/terraform-aws-perimeter?ref=v1.0.1"
 
   regions  = ["us-east-1", "ap-south-1"]
   accounts = { staging = "222222222222" }
@@ -46,7 +46,7 @@ module "perimeter" {
 }
 
 module "perimeter_member" {
-  source    = "github.com/ankitkr/terraform-aws-perimeter//modules/member?ref=v1.0.0"
+  source    = "github.com/ankitkr/terraform-aws-perimeter//modules/member?ref=v1.0.1"
   providers = { aws = aws.staging }
 
   scanner_account_id = module.perimeter.member.scanner_account_id

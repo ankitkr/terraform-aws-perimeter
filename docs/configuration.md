@@ -75,7 +75,7 @@ main module's `member` output:
 
 ```hcl
 module "perimeter_member" {
-  source = "github.com/ankitkr/terraform-aws-perimeter//modules/member?ref=v1.0.0"
+  source = "github.com/ankitkr/terraform-aws-perimeter//modules/member?ref=v1.0.1"
 
   scanner_account_id = "111111111111"   # member.scanner_account_id
   scanner_region     = "us-east-1"      # member.scanner_region

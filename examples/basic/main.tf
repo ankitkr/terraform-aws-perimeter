@@ -16,7 +16,7 @@ provider "aws" {
 }
 
 module "perimeter" {
-  source = "github.com/ankitkr/terraform-aws-perimeter?ref=v1.0.0"
+  source = "github.com/ankitkr/terraform-aws-perimeter?ref=v1.0.1"
 
   regions = ["eu-west-1"]
   mode    = "baseline"
