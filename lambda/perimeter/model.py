@@ -390,6 +390,7 @@ class Alert:
             "source": "custom",
             "content": {"textType": "client-markdown", "title": self.title[:250], "description": self.description[:8000]},
             "metadata": {
+                "enableCustomActions": False,  # no buttons in v1; also hides Amazon Q's "manage actions" menu
                 "eventType": f"perimeter-{self.kind.value}",
                 "additionalContext": {
                     "kind": self.kind.value,

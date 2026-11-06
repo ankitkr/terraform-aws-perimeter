@@ -19,6 +19,9 @@ route passes through a firewall or load balancer appliance or a transit gateway 
 module doesn't analyse. "[partial]" means the NACL lets replies out on only part of the
 ephemeral range, so some clients connect and others time out.
 
+Alert titles use plain words ("open, not expected"); the inventory document and this list use
+the verdict names.
+
 What to do:
 
 - **unexpected-open**: close it (the rule in "Why"), or declare it in `expected` with a reason.

@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.1
+
+- Notification titles read as words ("bastion: tcp/22 open, not expected") instead of verdict
+  slugs; "was …" and resolved notes use the same wording. The inventory document keeps the slugs.
+- Notifications no longer show Amazon Q's actions menu, since v1 has no buttons.
+
 ## v1.0.0
 
 First release.

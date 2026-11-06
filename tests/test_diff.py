@@ -34,7 +34,7 @@ def test_a_new_verdict_alerts_with_why_and_banner():
 def test_a_changed_verdict_names_the_old_one():
     latent = finding("tcp/22", Verdict.LATENT_CONFIRMED, Severity.LOW, paths=(PATH22,))
     alerts = diff({EP.id: state(EP, latent)}, {EP.id: state(EP, OPEN22)}, CFG, SCOPES)
-    assert alerts[0].description.endswith("(was latent-confirmed)")
+    assert alerts[0].description.endswith("(was reachable, nothing listening)")
 
 
 def test_below_min_severity_doesnt_alert_and_dropping_below_resolves():
@@ -43,7 +43,7 @@ def test_below_min_severity_doesnt_alert_and_dropping_below_resolves():
     expected = finding("tcp/22", Verdict.EXPECTED_OPEN, Severity.NONE)
     resolved = diff({EP.id: state(EP, OPEN22)}, {EP.id: state(EP, expected)}, CFG, SCOPES)
     assert kinds(resolved) == [(AlertKind.RESOLVED, EP.id, "tcp/22")]
-    assert "was unexpected-open, now expected-open" in resolved[0].description
+    assert "was open, not expected; now open, as expected." in resolved[0].description
     gone = diff({EP.id: state(EP, OPEN22)}, {EP.id: state(EP)}, CFG, SCOPES)
     assert "no longer seen" in gone[0].description
 
@@ -162,3 +162,13 @@ def test_baseline_summary_counts_what_would_alert():
     assert alert.kind is AlertKind.SUMMARY
     assert alert.description.startswith("2 endpoints in 1 account, 1 open port. In enforce mode 1 would alert (1 critical).")
     assert "s3://perimeter-bucket/suggested-expected.tf" in alert.description
+
+
+
+def test_titles_read_as_words_and_every_verdict_has_a_phrase():
+    from diff import PHRASES
+
+    assert set(PHRASES) == set(Verdict)
+    [alert] = diff({EP.id: state(EP)}, {EP.id: state(EP, OPEN22)}, CFG, SCOPES)
+    assert alert.title == f":rotating_light: {EP.display}: tcp/22 open, not expected"
+    assert alert.chatbot()["metadata"]["enableCustomActions"] is False  # hides the actions menu

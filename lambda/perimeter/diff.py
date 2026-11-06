@@ -46,6 +46,33 @@ def _banner(finding):
     return f" Banner: `{finding.banner}`." if finding.banner else ""
 
 
+# How a verdict reads in a title or a "was …" note; the inventory document keeps the slugs.
+PHRASES = {
+    Verdict.UNEXPECTED_OPEN: "open, not expected",
+    Verdict.UNEXPLAINED_OPEN: "open, no path explains it",
+    Verdict.EXPECTED_OPEN: "open, as expected",
+    Verdict.LATENT_CONFIRMED: "reachable, nothing listening",
+    Verdict.LATENT_FILTERED: "configured open, probe dropped",
+    Verdict.ALLOWLISTED: "open to specific sources only",
+    Verdict.EXPECTED_CLOSED: "expected open, not answering",
+    Verdict.UNAUTHENTICATED_URL: "function URL without authentication",
+    Verdict.PUBLIC_API: "public API",
+    Verdict.EXPECTED_PUBLIC: "public, as expected",
+    Verdict.HTTP_OPEN: "answering HTTP",
+    Verdict.HTTP_DENIED: "refusing HTTP",
+    Verdict.HTTP_UNREACHABLE: "not answering HTTP",
+    Verdict.EXPECTATION_CONFLICT: "tag and variable disagree",
+}
+
+
+def phrase(verdict):
+    return PHRASES.get(verdict, verdict.value.replace("-", " "))
+
+
+def _title_subject(finding):
+    return f"{finding.subject} {phrase(finding.verdict)}" if finding.subject.startswith("tcp/") else phrase(finding.verdict)
+
+
 def _line(endpoint, finding):
     if finding.subject.startswith("tcp/"):
         state = {
@@ -62,12 +89,12 @@ def _line(endpoint, finding):
 
 
 def _finding_alert(endpoint, finding, before):
-    was = f" (was {before.verdict.value})" if before else ""
+    was = f" (was {phrase(before.verdict)})" if before else ""
     return Alert(
         AlertKind.FINDING,
         finding.severity,
         endpoint.account,
-        f"{ICONS[finding.severity]} {endpoint.display or endpoint.id}: {finding.subject} {finding.verdict.value}",
+        f"{ICONS[finding.severity]} {endpoint.display or endpoint.id}: {_title_subject(finding)}",
         f"{_name(endpoint)}: {_line(endpoint, finding)}{was}",
         endpoint.id,
         {"subject": finding.subject, "verdict": finding.verdict.value, "region": endpoint.region},
@@ -75,13 +102,13 @@ def _finding_alert(endpoint, finding, before):
 
 
 def _resolved_alert(endpoint, before, after):
-    now = f"now {after.verdict.value}" if after else "no longer seen"
+    now = f"now {phrase(after.verdict)}" if after else "no longer seen"
     return Alert(
         AlertKind.RESOLVED,
         before.severity,
         endpoint.account,
-        f":white_check_mark: {endpoint.id}: {before.subject} resolved",
-        f"{_name(endpoint)}: {before.subject} was {before.verdict.value}, {now}.",
+        f":white_check_mark: {endpoint.display or endpoint.id}: {before.subject} resolved",
+        f"{_name(endpoint)}: {before.subject} was {phrase(before.verdict)}; {now}.",
         endpoint.id,
         {"subject": before.subject, "verdict": after.verdict.value if after else "none", "region": endpoint.region},
     )
